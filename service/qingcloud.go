@@ -18,10 +18,10 @@
 package service
 
 import (
-	"github.com/yunify/qingcloud-sdk-go/config"
-	"github.com/yunify/qingcloud-sdk-go/logger"
-	"github.com/yunify/qingcloud-sdk-go/request"
-	"github.com/yunify/qingcloud-sdk-go/request/data"
+	"qingcloud-sdk-go/config"
+	"qingcloud-sdk-go/logger"
+	"qingcloud-sdk-go/request"
+	"qingcloud-sdk-go/request/data"
 )
 
 // QingCloudService: QingCloud provides a platform which can make the delivery of computing resources more simple, efficient and reliable, even more environmental.

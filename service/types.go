@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/yunify/qingcloud-sdk-go/request/errors"
+	"qingcloud-sdk-go/request/errors"
 )
 
 type AccessKey struct {

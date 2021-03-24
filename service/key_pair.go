@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/yunify/qingcloud-sdk-go/config"
-	"github.com/yunify/qingcloud-sdk-go/request"
-	"github.com/yunify/qingcloud-sdk-go/request/data"
-	"github.com/yunify/qingcloud-sdk-go/request/errors"
+	"qingcloud-sdk-go/config"
+	"qingcloud-sdk-go/request"
+	"qingcloud-sdk-go/request/data"
+	"qingcloud-sdk-go/request/errors"
 )
 
 var _ fmt.State

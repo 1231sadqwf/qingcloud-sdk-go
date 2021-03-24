@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/yunify/qingcloud-sdk-go/config"
-	"github.com/yunify/qingcloud-sdk-go/request"
-	"github.com/yunify/qingcloud-sdk-go/request/data"
-	"github.com/yunify/qingcloud-sdk-go/request/errors"
+	"qingcloud-sdk-go/config"
+	"qingcloud-sdk-go/request"
+	"qingcloud-sdk-go/request/data"
+	"qingcloud-sdk-go/request/errors"
 )
 
 var _ fmt.State
@@ -171,6 +171,7 @@ func (s *EIPService) AssociateEIP(i *AssociateEIPInput) (*AssociateEIPOutput, er
 type AssociateEIPInput struct {
 	EIP      *string `json:"eip" name:"eip" location:"params"`           // Required
 	Instance *string `json:"instance" name:"instance" location:"params"` // Required
+	NIC      *string `json:"nic" name:"nic" location:"params"`
 }
 
 func (v *AssociateEIPInput) Validate() error {

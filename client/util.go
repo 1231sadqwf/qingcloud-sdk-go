@@ -2,9 +2,9 @@ package client
 
 import (
 	"fmt"
-	"github.com/yunify/qingcloud-sdk-go/logger"
-	"github.com/yunify/qingcloud-sdk-go/service"
-	"github.com/yunify/qingcloud-sdk-go/utils"
+	"qingcloud-sdk-go/logger"
+	"qingcloud-sdk-go/service"
+	"qingcloud-sdk-go/utils"
 	"time"
 )
 

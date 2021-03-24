@@ -22,8 +22,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/yunify/qingcloud-sdk-go/config"
-	"github.com/yunify/qingcloud-sdk-go/request/data"
+	"qingcloud-sdk-go/config"
+	"qingcloud-sdk-go/request/data"
 )
 
 type InstanceServiceProperties struct {

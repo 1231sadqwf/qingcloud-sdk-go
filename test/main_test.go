@@ -25,8 +25,8 @@ import (
 
 	"github.com/DATA-DOG/godog"
 
-	"github.com/yunify/qingcloud-sdk-go/config"
-	qc "github.com/yunify/qingcloud-sdk-go/service"
+	"qingcloud-sdk-go/config"
+	qc "qingcloud-sdk-go/service"
 )
 
 func TestMain(m *testing.M) {

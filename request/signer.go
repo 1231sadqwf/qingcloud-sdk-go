@@ -27,8 +27,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/yunify/qingcloud-sdk-go/logger"
-	"github.com/yunify/qingcloud-sdk-go/utils"
+	"qingcloud-sdk-go/logger"
+	"qingcloud-sdk-go/utils"
 )
 
 // Signer is the http request signer for IaaS service.

@@ -23,7 +23,7 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/yunify/qingcloud-sdk-go/utils"
+	"qingcloud-sdk-go/utils"
 )
 
 func TestSigner0(t *testing.T) {

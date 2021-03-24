@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/DATA-DOG/godog"
-	qc "github.com/yunify/qingcloud-sdk-go/service"
+	qc "qingcloud-sdk-go/service"
 )
 
 func JobFeatureContext(s *godog.Suite) {

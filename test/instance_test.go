@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"github.com/DATA-DOG/godog"
 	"github.com/DATA-DOG/godog/gherkin"
-	qcErrors "github.com/yunify/qingcloud-sdk-go/request/errors"
-	qc "github.com/yunify/qingcloud-sdk-go/service"
+	qcErrors "qingcloud-sdk-go/request/errors"
+	qc "qingcloud-sdk-go/service"
 	"strconv"
 	"time"
 )
