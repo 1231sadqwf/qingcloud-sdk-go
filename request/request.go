@@ -166,6 +166,7 @@ func (r *Request) send() error {
 	var response *http.Response
 	var err error
 
+	fmt.Println(r.HTTPRequest.URL)
 	if r.Operation.Config.Connection == nil {
 		return errors.New("connection not initialized")
 	}

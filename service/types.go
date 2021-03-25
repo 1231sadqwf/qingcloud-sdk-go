@@ -773,6 +773,20 @@ func (v *EIPGroup) Validate() error {
 	return nil
 }
 
+type EIPGroups struct {
+	Status       *string    `json:"status" name:"status"`
+	EipGroupID   *string    `json:"eip_group_id" name:"eip_group_id"`
+	EipGroupName *string    `json:"eip_group_name" name:"eip_group_name"`
+	ExtraFee     *int       `json:"extra_fee" name:"extra_fee"`
+	IPVersion    *int       `json:"ip_version" name:"ip_version"`
+	CreateTime   *time.Time `json:"create_time" name:"create_time"`
+}
+
+func (v *EIPGroups) Validate() error {
+
+	return nil
+}
+
 type EIPResource struct {
 	ResourceID   *string `json:"resource_id" name:"resource_id"`
 	ResourceName *string `json:"resource_name" name:"resource_name"`

@@ -80,7 +80,8 @@ type AllocateEIPsInput struct {
 	Count       *int    `json:"count" name:"count" default:"1" location:"params"`
 	EIPName     *string `json:"eip_name" name:"eip_name" location:"params"`
 	// NeedICP's available values: 0, 1
-	NeedICP *int `json:"need_icp" name:"need_icp" default:"0" location:"params"`
+	NeedICP  *int    `json:"need_icp" name:"need_icp" default:"0" location:"params"`
+	EIPGroup *string `json:"eip_group" name:"eip_group" location:"params"`
 }
 
 func (v *AllocateEIPsInput) Validate() error {
@@ -536,4 +537,55 @@ type ReleaseEIPsOutput struct {
 	Action  *string `json:"action" name:"action" location:"elements"`
 	JobID   *string `json:"job_id" name:"job_id" location:"elements"`
 	RetCode *int    `json:"ret_code" name:"ret_code" location:"elements"`
+}
+
+type DescribeEipGroupsInput struct {
+	Owner  *string   `json:"owner" name:"owner" location:"params"`
+	Limit  *int      `json:"limit" name:"limit" default:"20" location:"params"`
+	Offset *int      `json:"offset" name:"offset" default:"0" location:"params"`
+	Status []*string `json:"status" name:"status" location:"params"`
+}
+
+func (s *EIPService) DescribeEipGroups(i *DescribeEipGroupsInput) (*DescribeEipGroupsOutput, error) {
+	if i == nil {
+		i = &DescribeEipGroupsInput{}
+	}
+	o := &data.Operation{
+		Config:        s.Config,
+		Properties:    s.Properties,
+		APIName:       "DescribeEipGroups",
+		RequestMethod: "GET",
+	}
+
+	x := &DescribeEipGroupsOutput{}
+	r, err := request.New(o, i, x)
+	if err != nil {
+		return nil, err
+	}
+
+	err = r.Send()
+	if err != nil {
+		return nil, err
+	}
+
+	return x, err
+}
+
+func (v *DescribeEipGroupsInput) Validate() error {
+
+	if v.Status == nil {
+		return errors.ParameterRequiredError{
+			ParameterName: "Status",
+			ParentName:    "DescribeEipGroupsInput",
+		}
+	}
+
+	return nil
+}
+
+type DescribeEipGroupsOutput struct {
+	EipGroupSet []*EIPGroups `json:"eip_group_set" name:"eip_group_set" location:"elements"`
+	Action      *string      `json:"action" name:"action" location:"elements"`
+	TotalCount  *int         `json:"total_count" name:"total_count" location:"elements"`
+	RetCode     *int         `json:"ret_code" name:"ret_code" location:"elements"`
 }
